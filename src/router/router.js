@@ -7,7 +7,7 @@ const Router = createBrowserRouter([
         Component: Home
     },
 ], {
-    basename: "https://henriquedantas20.github.io/tetrix"
+    basename: process.env.PUBLIC_URL
 })
 
 export default Router
