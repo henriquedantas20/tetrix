@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/tetrix/static/css/main.d3210f29.css",
+    "main.js": "/tetrix/static/js/main.1959fb1f.js",
+    "static/media/background-1.png": "/tetrix/static/media/background-1.7cc654867939f97a0c7e.png",
+    "static/media/guy-bg.png": "/tetrix/static/media/guy-bg.27508dd54a8e0712ae01.png",
+    "static/media/section-4-bg.png": "/tetrix/static/media/section-4-bg.63d7ca174f21a3cfef30.png",
+    "static/media/phone-app.png": "/tetrix/static/media/phone-app.b4c41909cca5e9a6f033.png",
+    "static/media/section-4-img-1.png": "/tetrix/static/media/section-4-img-1.6d41c58a7510fab97397.png",
+    "static/media/section-4-img-2.png": "/tetrix/static/media/section-4-img-2.99d22efdb4754b3d8ec5.png",
+    "static/media/cards.png": "/tetrix/static/media/cards.70cd60ab4b998abc8f5e.png",
+    "static/media/section-4-card-2.png": "/tetrix/static/media/section-4-card-2.a01b7a09169d2854f964.png",
+    "static/media/section-4-card-1.png": "/tetrix/static/media/section-4-card-1.a728558fb1ef5044046c.png",
+    "static/media/section-2-bg-1.png": "/tetrix/static/media/section-2-bg-1.482523dcb7febdb85653.png",
+    "static/media/section-2-bg-2.png": "/tetrix/static/media/section-2-bg-2.8463ee42aea36ff5f30c.png",
+    "static/media/partners.png": "/tetrix/static/media/partners.1ea8b634c5bea0d36a44.png",
+    "index.html": "/tetrix/index.html",
+    "main.d3210f29.css.map": "/tetrix/static/css/main.d3210f29.css.map",
+    "main.1959fb1f.js.map": "/tetrix/static/js/main.1959fb1f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3210f29.css",
+    "static/js/main.1959fb1f.js"
+  ]
+}
