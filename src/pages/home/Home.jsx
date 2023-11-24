@@ -111,37 +111,7 @@ const Home = () => {
                 <S.SectionTitle size="65px" mt="200px" color="#FFFFFF">Quem prova, aprova e adora</S.SectionTitle>
             </S.Section>
             <S.Footer>                
-                <S.FooterColumn>
-                    <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
-                    <S.FooterColumnText>Dolor sit amet</S.FooterColumnText>
-                    <S.FooterColumnText>Consectetur</S.FooterColumnText>
-                    <S.FooterColumnText>Adispiscing</S.FooterColumnText>
-                </S.FooterColumn>
-                <S.FooterColumn>
-                    <S.FooterColumnTitle>Lobortis</S.FooterColumnTitle>
-                    <S.FooterColumnText>Feugiat vivamus</S.FooterColumnText>
-                    <S.FooterColumnText>Commodo</S.FooterColumnText>
-                    <S.FooterColumnText>Sollicitudin</S.FooterColumnText>
-                    <S.FooterColumnText>Vulputate</S.FooterColumnText>
-                    <S.FooterColumnText>Feugiat</S.FooterColumnText>
-                </S.FooterColumn>
-                <S.FooterColumn>
-                    <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
-                    <S.FooterColumnText>Dolor sit amet</S.FooterColumnText>
-                    <S.FooterColumnText>Consectetur</S.FooterColumnText>
-                    <S.FooterColumnText>Adispiscing</S.FooterColumnText>
-                </S.FooterColumn>
-                <S.FooterColumn>
-                <S.FooterColumnTitle>Lobortis</S.FooterColumnTitle>
-                    <S.FooterColumnText>Feugiat vivamus</S.FooterColumnText>
-                    <S.FooterColumnText>Commodo</S.FooterColumnText>
-                    <S.FooterColumnText>Sollicitudin</S.FooterColumnText>
-                    <S.FooterColumnText>Vulputate</S.FooterColumnText>
-                    <S.FooterColumnText>Feugiat</S.FooterColumnText>
-                </S.FooterColumn>
-                <S.FooterColumn>
-                    <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
-                </S.FooterColumn>
+               <S.FooterColumnText>R. Leopoldo Couto Magalhães Júnior, 1098 - Itaim Bibi, São Paulo  SP, 04542-001</S.FooterColumnText>
             </S.Footer>
         </Container>
     );

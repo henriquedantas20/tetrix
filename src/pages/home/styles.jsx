@@ -145,13 +145,13 @@ const SectionButton = styled.button`
 const Footer = styled.footer`
     width: 120%;
     margin-left: -350px;
-    min-height: 900px;
+    min-height: 120px;
     padding-left: 150px;
     justify-content: center;
-    padding-top: 200px;
+    padding-top: 100px;
     background-color: #280843;
     display: grid;
-    grid-template-columns: 15% 15% 15% 15% 15%;
+    grid-template-columns: 28% 15% 15% 15% 15%;
 `;
 
 const FooterColumn = styled.div`    
