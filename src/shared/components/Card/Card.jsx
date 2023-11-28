@@ -76,12 +76,17 @@ export const CardAvatar = styled.div`
     background-color: #EB007F;
     position: absolute;
     top: -75px;
-    left: 37%;
+    left: 35%;
 
     @media (max-width: 768px) {
-        width: 100px;
-        height: 100px;
-        top: -50px;
+        width: 80px;
+        height: 80px;
+        top: -40px;
+        left: 40%;
+
+        & img {
+            scale: 0.7;
+        }
     }
 `;
 

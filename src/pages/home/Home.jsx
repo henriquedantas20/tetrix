@@ -137,7 +137,7 @@ const Home = () => {
                 </Carousel>
             </S.Section>
             <S.Footer>  
-                <img src={logoWhite} style={{ position: 'absolute', left: "430px", top: "100px" }} />              
+                <img src={logoWhite} style={{ position: isMobile ? 'unset' : 'absolute', left: "430px", top: "100px", scale: isMobile ? '0.3' : 'unset', marginLeft: isMobile ? '-160px' : '0' }} />              
                 <S.FooterColumn>
                     <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
                     <S.FooterColumnText>Dolor sit amet</S.FooterColumnText>
