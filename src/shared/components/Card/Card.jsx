@@ -76,7 +76,7 @@ export const CardAvatar = styled.div`
     background-color: #EB007F;
     position: absolute;
     top: -75px;
-    left: 35%;
+    left: 37%;
 
     @media (max-width: 768px) {
         width: 100px;
