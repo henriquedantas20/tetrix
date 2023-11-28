@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/tetrix/static/css/main.d3210f29.css",
-    "main.js": "/tetrix/static/js/main.065a6785.js",
+    "main.js": "/tetrix/static/js/main.8b138217.js",
     "static/media/background-1.png": "/tetrix/static/media/background-1.7cc654867939f97a0c7e.png",
     "static/media/guy-bg.png": "/tetrix/static/media/guy-bg.27508dd54a8e0712ae01.png",
     "static/media/section-4-bg.png": "/tetrix/static/media/section-4-bg.63d7ca174f21a3cfef30.png",
@@ -17,10 +17,10 @@
     "static/media/mobile-stores.png": "/tetrix/static/media/mobile-stores.feed73fe98c1a534b253.png",
     "index.html": "/tetrix/index.html",
     "main.d3210f29.css.map": "/tetrix/static/css/main.d3210f29.css.map",
-    "main.065a6785.js.map": "/tetrix/static/js/main.065a6785.js.map"
+    "main.8b138217.js.map": "/tetrix/static/js/main.8b138217.js.map"
   },
   "entrypoints": [
     "static/css/main.d3210f29.css",
-    "static/js/main.065a6785.js"
+    "static/js/main.8b138217.js"
   ]
 }
