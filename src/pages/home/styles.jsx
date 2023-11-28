@@ -209,6 +209,7 @@ const Footer = styled.footer`
     background-color: #280843;
     display: grid;
     grid-template-columns: 15% 15% 15% 15% 15%;
+    position: relative;
 
     @media (max-width: 768px) {
         display: flex;
@@ -253,6 +254,45 @@ const FooterColumnText = styled.div`
     }
 `
 
+const FooterNewsletter = styled.div`
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    left: -480px;
+    top: 80px;
+    width: 800px;
+    height: 70%;
+    background-color: #EB0081;
+    z-index: 2;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    transition: all 0.2s ease-in;
+
+    & input {
+        width: 70%;        
+        height: 50px;
+        border: none;
+        outline none;
+        border-radius: 20px;
+        padding: 15px;
+        font-size: 22px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &:hover {
+        left: 200px;
+        transition: all 0.2s ease-in;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
+`
+
 const S = {
     Header,
     Logo,
@@ -267,7 +307,8 @@ const S = {
     Footer,
     FooterColumn,
     FooterColumnTitle,
-    FooterColumnText
+    FooterColumnText,
+    FooterNewsletter
 }
 
 export default S

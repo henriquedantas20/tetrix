@@ -3,6 +3,7 @@ import { Container } from "../../shared/components/Container/Container";
 import S from './styles'
 import background from '../../assets/img/background-1.png'
 import logo from '../../assets/img/logo.png'
+import logoWhite from '../../assets/img/logo-2.png'
 import guyBg from '../../assets/img/guy-bg.png'
 import phoneApp from '../../assets/img/phone-app.png'
 import section2bg2 from '../../assets/img/section-2-bg-1.png'
@@ -17,6 +18,13 @@ import partners from '../../assets/img/partners.png'
 import iconAdd from '../../assets/img/icon-add.png'
 import iconPerson from '../../assets/img/icon-person.png'
 import iconCard from '../../assets/img/icon-card.png'
+import mobileStores from '../../assets/img/mobile-stores.png'
+import whatsapp from '../../assets/img/whatsapp.png'
+import facebook from '../../assets/img/facebook.png'
+import instagram from '../../assets/img/instagram.png'
+import messenger from '../../assets/img/messenger.png'
+import newsletter from '../../assets/img/newsletter.png'
+import Carousel from "../../shared/components/Carousel/Carousel";
 
 const Home = () => {
     const isMobile = window.innerWidth <= 768
@@ -81,7 +89,7 @@ const Home = () => {
                 <img src={partners} style={{ marginLeft: isMobile ? "0" : "11%", marginTop: isMobile ? '50px' : '100px', width: isMobile ? "100%" : "unset" }} />
                 <S.SectionTitle textAlign="center" ml={isMobile ? "0" : "27%"} mt="200px" color="#EB007F">O Tetrix não para<br />de crescer e gerar frutos</S.SectionTitle>
             </S.Section>
-            <S.Section minHeight="1500px" mobileMinHeight="1300px">
+            <S.Section minHeight="1500px" mobileMinHeight="1700px">
                 <img style={{ position: 'absolute', top: '0', left: '-160px', zIndex: 1 }} src={section4bg} />
                 <div style={{ width: isMobile ? "100%": "110%", display: 'flex', marginLeft: '0px', flexDirection: isMobile ? "column" : "row", alignItems: isMobile ? "center" : "unset" }}>
                     <Card noPadding alignItems="center" position="relative" mt="90px" noShadow width={isMobile ? "90%" : "33%"} height="400px" mr={isMobile ? "0" : "50px"}>
@@ -110,8 +118,26 @@ const Home = () => {
                     </Card>
                 </div>
                 <S.SectionTitle size="65px" mt="200px" color="#FFFFFF">Quem prova, aprova e adora</S.SectionTitle>
+                <Carousel>
+                    <Card isCarousel shadowColor="#777" minWidth="350px" height="450px" mr="40px">
+                        <CardInfo></CardInfo>
+                    </Card>                
+                    <Card isCarousel shadowColor="#777" minWidth="350px" height="450px" mr="40px">
+                        <CardInfo></CardInfo>
+                    </Card>                
+                    <Card isCarousel shadowColor="#777" minWidth="350px" height="450px" mr="40px">
+                        <CardInfo></CardInfo>
+                    </Card>                
+                    <Card isCarousel shadowColor="#777" minWidth="350px" height="450px" mr="40px">
+                        <CardInfo></CardInfo>
+                    </Card>                
+                    <Card isCarousel shadowColor="#777" minWidth="350px" height="450px" mr="40px">
+                        <CardInfo></CardInfo>
+                    </Card>                                                                                                          
+                </Carousel>
             </S.Section>
-            <S.Footer>                
+            <S.Footer>  
+                <img src={logoWhite} style={{ position: 'absolute', left: "430px", top: "100px" }} />              
                 <S.FooterColumn>
                     <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
                     <S.FooterColumnText>Dolor sit amet</S.FooterColumnText>
@@ -142,7 +168,21 @@ const Home = () => {
                 </S.FooterColumn>
                 <S.FooterColumn>
                     <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
+                    <img src={mobileStores} style={{ scale: isMobile ? "0.8" : "1" }} />
+                    <div style={{ display: "flex", marginTop: isMobile ? 20 : 50, marginBottom: isMobile ? "50px" : "0" }}>
+                        <img src={instagram} style={{ marginRight: 10 }} />
+                        <img src={facebook} style={{ marginRight: 10 }} />
+                        <img src={messenger} style={{ marginRight: 10 }} />
+                        <img src={whatsapp} style={{ marginRight: 10 }} />
+                    </div>
                 </S.FooterColumn>
+                <S.FooterNewsletter>
+                    <img src={newsletter} style={{ position: 'absolute', top: '18%', right: '70px' }} />
+                    <div style={{ width: "85%", display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+                        <input placeholder="Insira seu e-mail" />
+                        <S.SectionButton mt="30px" variant="dark">Enviar</S.SectionButton>
+                    </div>
+                </S.FooterNewsletter>
             </S.Footer>
         </Container>
     );

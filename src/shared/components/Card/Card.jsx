@@ -7,10 +7,11 @@ const Card = styled.div`
     flex-direction: column;
     padding-left: ${props => props.noPadding ? "" : "70px"};
     width: ${props => props.width};
+    min-width: ${props => props.minWidth};
     height: ${props => props.height};
     background: ${props => props.gradient ? "linear-gradient(70deg, rgba(122,52,107,1) 0%, rgba(83,42,88,1) 100%)" : "#FFFFFF"};
     border-radius: 28px;
-    box-shadow: ${props => props.noShadow ? "" : "-10px 40px 100px 0px #ccc"};
+    box-shadow: ${({noShadow, shadowColor}) => noShadow ? "" : `-10px 40px 100px 0px ${shadowColor || "#ccc"}`};
     margin-left: ${props => props.ml};
     margin-right: ${props => props.mr};
     margin-top: ${props => props.mt};
@@ -27,7 +28,9 @@ const Card = styled.div`
         height: auto;
         align-items: center;
         padding: 10px;
-        margin: 15px 0;
+        min-width: ${props => props.isCarousel ? "90%" : "unset"};
+        margin: ${props => props.isCarousel ? "9px" : "15px 0"};
+        ${props => props.isCarousel && "box-shadow: 0px 0px 10px 0px #777;"}
     }
 `;
 
