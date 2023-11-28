@@ -10,4 +10,9 @@ export const Container = styled.div`
     align-items: flex-start;
     padding: 0 150px;
     position: relative;
+
+    @media (max-width: 768px) {
+        padding: 0;
+        overflow-x: hidden;
+    }
 `;

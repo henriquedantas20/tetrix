@@ -7,12 +7,27 @@ const Header = styled.header`
     align-items: center;
     width: 85%;
     height: 180px;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        height: 100px;
+        justify-content: end;
+
+        nav {
+            display: none;
+        }
+    }
 `;
 
 const Logo = styled.img`
     width: 180px;
     height: auto;
     cursor: pointer;
+
+    @media (max-width: 768px) {
+        width: 100px;
+        margin-right: 20px;
+    }
 `
 
 const Nav = styled.nav`
@@ -22,6 +37,10 @@ const Nav = styled.nav`
 
     &:last-child span {
         margin-right: 60px;
+    }
+
+    @media (max-width: 768px) {
+        display: none;
     }
 `
 
@@ -62,6 +81,10 @@ const Button = styled.button`
     &:hover {
         opacity: 0.7;
     }
+
+    @media (max-width: 768px) {
+        display: none;
+    }
 `
 
 const Section = styled.div`
@@ -72,10 +95,20 @@ const Section = styled.div`
     width: 80%;
     height: auto;
     min-height: ${props => props.minHeight};
-    margin-top: ${props => props.marginTop};   
+    margin-top: ${props => props.marginTop};
+    margin-bottom: ${props => props.marginBottom};   
     padding: 100px 0px;
     position: relative;
     z-index: 2;
+
+    @media (max-width: 768px) {
+        width: 100%;
+        padding: 0;  
+        justify-content: center;
+        align-items: center;     
+        min-height: ${props => props.mobileMinHeight || "unset"}; 
+        margin-bottom: ${props => props.marginBottom};
+    }
 `;
 
 const SectionTitle = styled.span` 
@@ -88,6 +121,13 @@ const SectionTitle = styled.span`
     font-family: 'Ubuntu', sans-serif;
     text-align: ${props => props.textAlign};
     z-index: 2;
+
+    @media (max-width: 768px) {
+        margin-top: 50px;
+        font-size: 22px;
+        text-align: center;
+        max-width: 90%;
+    }
 `;
 
 const SectionSubtitle = styled.span` 
@@ -98,6 +138,12 @@ const SectionSubtitle = styled.span`
     margin-left: ${props => props.ml};
     margin-top: ${props => props.mt};
     font-family: 'Ubuntu', sans-serif;
+    
+    @media (max-width: 768px) {
+        font-size: 18px;
+        text-align: center;
+        max-width: 90%;
+    }
 `;
 
 const SectionDescription = styled.span`
@@ -107,6 +153,12 @@ const SectionDescription = styled.span`
     color: ${props => props.color};
     margin-top: 50px;
     font-family: 'Ubuntu', sans-serif;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        text-align: center;
+        max-width: 90%;
+    }
 `;
 
 const SectionButton = styled.button`
@@ -140,6 +192,11 @@ const SectionButton = styled.button`
     &:hover {
         opacity: 0.7;
     }
+
+    @media (max-width: 768px) {
+        font-size: 13px;
+        height: 40px;
+    }
 `
 
 const Footer = styled.footer`
@@ -148,21 +205,40 @@ const Footer = styled.footer`
     min-height: 120px;
     padding-left: 150px;
     justify-content: center;
-    padding-top: 100px;
+    padding-top: 200px;
     background-color: #280843;
     display: grid;
-    grid-template-columns: 28% 15% 15% 15% 15%;
+    grid-template-columns: 15% 15% 15% 15% 15%;
+
+    @media (max-width: 768px) {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
 `;
 
 const FooterColumn = styled.div`    
     width: 80%;
     height: 500px;
+
+    @media (max-width: 768px) {
+        height: auto;
+        margin-top: 20px;
+        margin-left: 20px;
+    }
 `;
 
 const FooterColumnTitle = styled.div`
     font-size: 28px;
     color: #fff;
     margin-bottom: 10px;
+
+    @media (max-width: 768px) { 
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
 `
 
 const FooterColumnText = styled.div`
@@ -170,6 +246,11 @@ const FooterColumnText = styled.div`
     color: #fff;
     margin-bottom: 10px;
     font-weight: 100;
+
+    @media (max-width: 768px) { 
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
 `
 
 const S = {

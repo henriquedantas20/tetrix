@@ -19,10 +19,11 @@ import iconPerson from '../../assets/img/icon-person.png'
 import iconCard from '../../assets/img/icon-card.png'
 
 const Home = () => {
+    const isMobile = window.innerWidth <= 768
     return (
         <Container>
-            <img style={{ position: 'absolute', left: 0, top: -40, zIndex: 1 }} src={background} />
-            <img style={{ position: 'absolute', left: 0, top: -40, zIndex: 1 }} src={guyBg} />
+            <img style={{ position: 'absolute', left: isMobile ? -10 : 0, top: isMobile ? 0 : -40, zIndex: 1, width: isMobile ? "200%" : "unset", height: isMobile ? "525px" : "unset" }} src={background} />
+            {!isMobile && <img style={{ position: 'absolute', left: 0, top: -40, zIndex: 1 }} src={guyBg} />}
             <S.Header style={{ zIndex: 2 }}>
                 <S.Logo src={logo} />
                 <S.Nav>
@@ -37,53 +38,53 @@ const Home = () => {
                 <S.SectionDescription color="#ffffff" maxWidth="535px">Descubra o controle e praticidade que o RH precisa e a liberdadede benefícios que o seu colaborador quer, tudo isso com custo zero para a sua empresa.</S.SectionDescription>
                 <S.SectionButton variant="secondary">Quero conhecer</S.SectionButton>
             </S.Section>
-            <S.Section minHeight="1040px" marginTop="600px" position="right">
-                <img style={{ position: 'absolute', top: '-15%', scale: '1.2', zIndex: 2 }} src={phoneApp} />
+            <S.Section minHeight="1040px" marginBottom={isMobile ? "50px" : "0"} marginTop={isMobile ? "100px" : "600px"} position="right">
+                {!isMobile && <img style={{ position: 'absolute', top: '-15%', scale: '1.2', zIndex: 2 }} src={phoneApp} />}
                 <img style={{ position: 'absolute', top: '-40%', right: '-260px' }} src={section2bg1} />
-                <img style={{ position: 'absolute', top: '-25%', left: '50px' }} src={section2bg2} />
+                {!isMobile && <img style={{ position: 'absolute', top: '-25%', left: '50px' }} src={section2bg2} />}
                 <S.SectionTitle maxWidth="600px" color="#EB007F">Vapt vupt.<br />Todos os benefícios em um único lugar.</S.SectionTitle>                                
                 <S.SectionDescription maxWidth="600px">De forma simples, o RH pode concentrar todos os benefícios previstos na legislação em um único cartão bandeira Visa.</S.SectionDescription>
-                <S.SectionButton variant="primary" mr="400px">Vem cá saber mais</S.SectionButton>                                
+                <S.SectionButton variant="primary" mr={isMobile ? "0" : "400px"}>Vem cá saber mais</S.SectionButton>                                
             </S.Section>
             <S.Section minHeight="1300px">
-                <img style={{ position: 'absolute', top: '-31%', left: '290px' }} src={cards} />
+                {!isMobile && <img style={{ position: 'absolute', top: '-31%', left: '290px' }} src={cards} />}
                 <Card width="500px" height="400px">
                     <CardTitle color="#EB007F">O custo é zero</CardTitle>
                     <CardInfo maxWidth="440px">Você só paga o saldo de benefícios dos seus colaboradores. A emissão e envio do cartão, pode deixar com a gente. Com a caju é zero preju.</CardInfo>
                 </Card>
-                <Card gradient position="absolute" top="470px" left="150px" width="500px" height="400px">
+                <Card gradient position={isMobile ? "unset" : "absolute"} top="470px" left="150px" width="500px" height="400px">
                     <CardTitle color="#FFFFFF">Gradient Card</CardTitle>
                     <CardInfo color="#FFFFFF" maxWidth="440px">Você só paga o saldo de benefícios dos seus colaboradores. A emissão e envio do cartão, pode deixar com a gente. Com a caju é zero preju.</CardInfo>
                 </Card>
-                <Card position="absolute" top="750px" left="850px" width="500px" height="480px">
+                <Card position={isMobile ? "unset" : "absolute"} top="750px" left="850px" width="500px" height="480px">
                     <CardTitle color="#EB007F">Atendimento<br />que dá gosto!</CardTitle>
                     <CardInfo maxWidth="440px">Como o cartão físico ou aplicativo é possível acessar todos os seus benefícios no Caju. E se surgir alguma dúvida? Pode chamar a gente, mesmo nos finais de semana e feriados.</CardInfo>
                 </Card>
-                <Card position="absolute" top="1000px" left="220px" width="450px" height="400px">
+                <Card position={isMobile ? "unset" : "absolute"} top="1000px" left="220px" width="450px" height="400px">
                     <CardTitle color="#EB007F">Tudo nos<br />conformes</CardTitle>
                     <CardInfo maxWidth="440px">A Caju é legalmente legal, nossos benefícios seguem os padrões de benefícios da CLT tim tim por tim tim.</CardInfo>
                 </Card>
             </S.Section>
             <S.Section minHeight="1300px">
-                <img style={{ position: 'absolute', top: '0', left: '-160px', zIndex: 1 }} src={section4bg} />
-                <div style={{ display: "flex", justifyContent: 'center', width: '100%' }}>
-                    <img src={section4img2} style={{ zIndex: 2, marginTop: '200px', scale: '0.95', marginRight: '-140px' }} />
-                    <img src={section4img1} style={{ zIndex: 2, marginTop: '200px', scale: '0.95' }} />
-                    <img src={section4card1} style={{ zIndex: 2, position: 'absolute', left: '-465px', top: '300px' }} />
-                    <img src={section4card2} style={{ zIndex: 2, position: 'absolute', left: '325px', top: '300px' }} />
+                <img style={{ position: 'absolute', top: isMobile ? '50px' : '0', left: isMobile ? '0' : '-160px', zIndex: 1, width: isMobile ? "100%" : "unset", height: isMobile ? "300px" : "unset" }} src={section4bg} />
+                <div style={{ display: "flex", alignItems: "center", justifyContent: 'center', flexDirection: isMobile ? "column" : "row", width: '100%' }}>
+                    <img src={section4img2} style={{ zIndex: 2, marginTop: isMobile ? '100px' : '200px', scale: isMobile ? '1' : '0.95', width: isMobile ? "90%": "unset", marginRight: isMobile ? '50px' : '-140px' }} />
+                    <img src={section4img1} style={{ zIndex: 2, marginTop: isMobile ? '100px' : '200px', scale: isMobile ? '1' : '0.95', width: isMobile ? "90%": "unset", marginRight: isMobile ? '52px' : 'unset' }} />
+                    <img src={section4card1} style={{ zIndex: 2, position: 'absolute', left: isMobile ? '5%' : '-465px', top: isMobile ? '220px' : '300px', width: isMobile ? "90%": "unset", scale: isMobile ? '3' : 'unset' }} />
+                    <img src={section4card2} style={{ zIndex: 2, position: 'absolute', left: isMobile ? '5%' : '325px', top: isMobile ? '575px' : '300px', width: isMobile ? "90%": "unset", scale: isMobile ? '2.7' : 'unset' }} />
                 </div>
-                <S.SectionButton mt="100px" ml="48%" justify="center" variant="dark">Conhecer mais</S.SectionButton>
+                <S.SectionButton mt="100px" ml={isMobile ? "0" : "48%"} justify="center" variant="dark">Conhecer mais</S.SectionButton>
             </S.Section>
             <S.Section minHeight="1000px">
-                <S.SectionTitle size="65px" ml="30%" color="#EB007F">Quem desfruta do Tetrix</S.SectionTitle>
-                <S.SectionSubtitle ml="39%" mt="25px">Tem um pedacinho guardado pra você</S.SectionSubtitle>
-                <img src={partners} style={{ marginLeft: "11%", marginTop: '100px' }} />
-                <S.SectionTitle textAlign="center" ml="27%" mt="200px" color="#EB007F">O Tetrix não para<br />de crescer e gerar frutos</S.SectionTitle>
+                <S.SectionTitle size="65px" ml={isMobile ? "0" :  "30%"} color="#EB007F">Quem desfruta do Tetrix</S.SectionTitle>
+                <S.SectionSubtitle ml={isMobile ? "0" : "39%"} mt="25px">Tem um pedacinho guardado pra você</S.SectionSubtitle>
+                <img src={partners} style={{ marginLeft: isMobile ? "0" : "11%", marginTop: isMobile ? '50px' : '100px', width: isMobile ? "100%" : "unset" }} />
+                <S.SectionTitle textAlign="center" ml={isMobile ? "0" : "27%"} mt="200px" color="#EB007F">O Tetrix não para<br />de crescer e gerar frutos</S.SectionTitle>
             </S.Section>
-            <S.Section minHeight="1500px">
+            <S.Section minHeight="1500px" mobileMinHeight="1300px">
                 <img style={{ position: 'absolute', top: '0', left: '-160px', zIndex: 1 }} src={section4bg} />
-                <div style={{ width: "110%", display: 'flex', marginLeft: '0px' }}>
-                    <Card noPadding alignItems="center" position="relative" mt="90px" noShadow width="33%" height="400px" mr="50px">
+                <div style={{ width: isMobile ? "100%": "110%", display: 'flex', marginLeft: '0px', flexDirection: isMobile ? "column" : "row", alignItems: isMobile ? "center" : "unset" }}>
+                    <Card noPadding alignItems="center" position="relative" mt="90px" noShadow width={isMobile ? "90%" : "33%"} height="400px" mr={isMobile ? "0" : "50px"}>
                         <CardAvatar>
                             <img src={iconPerson} />
                         </CardAvatar>
@@ -111,7 +112,37 @@ const Home = () => {
                 <S.SectionTitle size="65px" mt="200px" color="#FFFFFF">Quem prova, aprova e adora</S.SectionTitle>
             </S.Section>
             <S.Footer>                
-               <S.FooterColumnText>R. Leopoldo Couto Magalhães Júnior, 1098 - Itaim Bibi, São Paulo  SP, 04542-001</S.FooterColumnText>
+                <S.FooterColumn>
+                    <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
+                    <S.FooterColumnText>Dolor sit amet</S.FooterColumnText>
+                    <S.FooterColumnText>Consectetur</S.FooterColumnText>
+                    <S.FooterColumnText>Adispiscing</S.FooterColumnText>
+                </S.FooterColumn>
+                <S.FooterColumn>
+                    <S.FooterColumnTitle>Lobortis</S.FooterColumnTitle>
+                    <S.FooterColumnText>Feugiat vivamus</S.FooterColumnText>
+                    <S.FooterColumnText>Commodo</S.FooterColumnText>
+                    <S.FooterColumnText>Sollicitudin</S.FooterColumnText>
+                    <S.FooterColumnText>Vulputate</S.FooterColumnText>
+                    <S.FooterColumnText>Feugiat</S.FooterColumnText>
+                </S.FooterColumn>
+                <S.FooterColumn>
+                    <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
+                    <S.FooterColumnText>Dolor sit amet</S.FooterColumnText>
+                    <S.FooterColumnText>Consectetur</S.FooterColumnText>
+                    <S.FooterColumnText>Adispiscing</S.FooterColumnText>
+                </S.FooterColumn>
+                <S.FooterColumn>
+                <S.FooterColumnTitle>Lobortis</S.FooterColumnTitle>
+                    <S.FooterColumnText>Feugiat vivamus</S.FooterColumnText>
+                    <S.FooterColumnText>Commodo</S.FooterColumnText>
+                    <S.FooterColumnText>Sollicitudin</S.FooterColumnText>
+                    <S.FooterColumnText>Vulputate</S.FooterColumnText>
+                    <S.FooterColumnText>Feugiat</S.FooterColumnText>
+                </S.FooterColumn>
+                <S.FooterColumn>
+                    <S.FooterColumnTitle>Lorem ipsum</S.FooterColumnTitle>
+                </S.FooterColumn>
             </S.Footer>
         </Container>
     );

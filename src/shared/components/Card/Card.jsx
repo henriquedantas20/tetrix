@@ -20,6 +20,15 @@ const Card = styled.div`
     opacity: ${props => props.opacity};
     z-index: 2;
     border: ${props => props.border};
+
+    @media (max-width: 768px) {
+        width: 90%;
+        min-height: 260px;
+        height: auto;
+        align-items: center;
+        padding: 10px;
+        margin: 15px 0;
+    }
 `;
 
 export const CardTitle = styled.span`
@@ -29,6 +38,14 @@ export const CardTitle = styled.span`
     color: ${props => props.color};
     margin-top: -30px;
     line-height: 56px;
+
+    @media (max-width: 768px) {
+        font-size: 27px;
+        margin: 0;
+        margin-top: 0px;
+        line-height: 38px;
+        text-align: center;
+    }
 `;
 
 export const CardInfo = styled.span`
@@ -37,6 +54,13 @@ export const CardInfo = styled.span`
     max-width: ${props => props.maxWidth};
     color: ${props => props.color};
     margin-top: 50px;
+
+    @media (max-width: 768px) {
+        font-size: 18px;
+        margin: 0;
+        margin-top: 30px;
+        text-align: center;
+    }
 `;
 
 export const CardAvatar = styled.div`
@@ -50,6 +74,12 @@ export const CardAvatar = styled.div`
     position: absolute;
     top: -75px;
     left: 35%;
+
+    @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+        top: -50px;
+    }
 `;
 
 export const CardText = styled.span`
@@ -59,6 +89,12 @@ export const CardText = styled.span`
     font-weight: ${props => props.weight};  
     text-align: center;
     margin-top: ${props => props.mt};
+
+    @media (max-width: 768px) {
+        font-size: 28px;
+        margin: 0;        
+        text-align: center;
+    }
 `;
 
 export default Card;
